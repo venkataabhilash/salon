@@ -1,0 +1,117 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 1rem 0;
+}
+
+.header-wrapper {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #C8C8C8;
+  border-radius: 50%;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  width: 50%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 0.5px solid #C8C8C8;
+}
+
+.search-wrapper * {
+  border: none;
+  outline: none;
+  padding: 0.25rem;
+  background: #F1F3F6;
+}
+
+.search-wrapper input {
+  width: 90%;
+  height: 100%;
+  padding: 0.25rem 1rem;
+}
+
+.search-wrapper .search-btn {
+  width: 10%;
+  height: 100%;
+  border-left: 1px solid #152336;
+}
+
+.search-wrapper .search-btn .search path {
+  transition: all 150ms ease-in;
+  stroke: #000000;
+}
+
+.search-wrapper .search-btn:hover .search path {
+  stroke-width : 3;
+}
+
+.search-btn:hover .search-btn {
+  background: #0C73EB;
+  transform: scale(1.2);
+}
+
+.profile-buttons-wrapper {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-buttons-wrapper * {
+  padding: 0.5rem 1rem;
+  height: 100%;
+  letter-spacing: 1px;
+  border-radius: 0.3rem;
+  border: 0.5px solid #C8C8C8;
+  background: #F1F3F6;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: all 150ms ease-in-out;
+}
+
+.profile-buttons-wrapper button:nth-child(1):hover {
+  background: #ffffff;
+  border: 2px solid #0C73EB;
+  color: #0C73EB;
+  text-decoration: underline;
+}
+
+.profile-buttons-wrapper button:nth-child(2):hover {
+  background: #ffffff;
+  border: 2px solid #00A568;
+  color: #00A568;
+  text-decoration: underline;
+}
+
+@media screen and (width <=885px) {
+  .header-wrapper {
+    width: 90vw;
+  }
+
+  .search-wrapper input {
+    width: 85%;
+  }
+
+  .search-wrapper .search-btn {
+    width: 15%;
+  }
+}
+@media screen and (width<=600px) {
+  .search-wrapper{
+    margin: 5px;
+  }
+  
+}

@@ -1,0 +1,134 @@
+.slider-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background: #F1F3F6;
+}
+
+.slide-wrapper {
+  position: relative;
+  display: flex;
+  width: 95vw;
+  /* max-width: 55%; */
+  /* max-height: fit-content; */
+}
+
+.slide {
+  width: 100%;
+  height: 70%;
+  aspect-ratio: 1.5;
+  border-radius: 0.5rem;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.quote {
+  position: absolute;
+  color: #152336;
+  background: #F1F3F6;
+  opacity: 0.9;
+  top: 10%;
+  right: 5%;
+  width: 15ch;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #152336;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.quote-hidden {
+  display: none;
+}
+
+.navigation-btns-wrapper {
+  position: absolute;
+  bottom: 350px;
+  left: 2rem;
+  box-shadow: 0 0 10px #000000;
+}
+
+.btn {
+  width: fit-content;
+  padding: 0rem 0.5rem;
+  opacity: 0.6;
+  border: none;
+  outline: none;
+}
+
+.btn img {
+  mix-blend-mode: color-burn;
+}
+
+.prev-btn {
+  border-right: 1px solid #000000;
+}
+
+.prev-btn img {
+  transform: rotate(180deg);
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicator {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  margin: 0.3rem;
+}
+
+.indicator-inactive {
+  opacity: 0.5;
+}
+
+@media screen and (width <=885px) {
+  .slide-wrapper {
+    max-width: 90%;
+  }
+
+  .quote {
+    width: 10ch;
+  }
+}
+@media screen and (max-width:1288px) and (min-width:885px) {
+  .navigation-btns-wrapper{
+    position: absolute;
+    bottom: 250px;
+  }
+}
+@media screen and (max-width:885px) and (min-width:610px) {
+  .navigation-btns-wrapper{
+    position: absolute;
+    bottom: 170px;
+  }
+  .quote{
+    display: none;
+  }
+}
+@media screen and (max-width:610px) and (min-width:450px){
+  .navigation-btns-wrapper{
+    position: absolute;
+    bottom: 120px;
+  }
+  .quote{
+    display: none;
+  }
+}
+@media screen and (width<=500px) {
+  .quote{
+    display: none;
+  }
+  
+}

@@ -1,0 +1,123 @@
+.nav-container {
+  width: 100vw;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F1F3F6;
+}
+
+.nav-container .nav-wrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-container .nav-wrapper,
+.nav-container .nav-wrapper .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.menu{
+  display: none;
+}
+.sidebar{
+  display: none;
+}
+
+.nav-container .nav-wrapper .nav-links-left,
+.nav-container .nav-wrapper .nav-links-right {
+  justify-content: unset;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-container .nav-wrapper .nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container .nav-wrapper .nav-links li button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+  letter-spacing: 1px;
+  background: none;
+  transition: all 250ms ease-in;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-container .nav-wrapper .nav-links li button:hover {
+  text-decoration: underline;
+  background: #ffffff;
+}
+
+.nav-container .nav-wrapper .nav-links-left li button:hover {
+  border: 1px solid #0C73EB;
+  color: #0C73EB;
+}
+
+.nav-container .nav-wrapper .nav-links-right li button:hover {
+  border: 2px solid #00A568;
+  color: #00A568;
+}
+
+
+@media screen and (width <=885px) {
+  .nav-container .nav-wrapper {
+    width: 90%;
+  }
+
+  .nav-container .nav-wrapper .nav-links-left,
+  .nav-container .nav-wrapper .nav-links-right {
+    gap: 0.5rem;
+  }
+}
+@media screen and (max-width:630px) and (min-width:500px) {
+  .nav-container .nav-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-container .nav-wrapper .nav-links-left,
+  .nav-container .nav-wrapper .nav-links-right {
+    gap: 5px;
+  }
+  .nav-container .nav-wrapper .nav-links li button{
+    padding: .6rem;
+  }
+}
+
+@media screen and (max-width:500px) and (min-width:350px) {
+  .menu{
+    display: block;
+  }
+  .nav-container .nav-wrapper .nav-links li button{
+    padding: .3rem;
+  }
+
+  .hide{
+    display: none;
+  }
+  .sidebar{
+    /* position: fixed;
+    top: 100px;
+    right: 0; */
+    height: auto;
+    width: 150px;
+    z-index: 999;
+    background-color:#72abd7;
+    box-shadow: -10px 0 10px rgba(225, 169, 169, 0.1);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+}
